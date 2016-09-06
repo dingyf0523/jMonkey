@@ -1,0 +1,15 @@
+MaterialDef DeferredBuffer {
+
+	MaterialParameters {
+		Texture2D LastTexture
+	}
+
+	Technique {
+		VertexShader GLSL100: Common/MatDefs/Post/Post.vert
+		FragmentShader GLSL100: Shaders/Common/DeferredBuffer.frag
+
+		WorldParameters {
+		}
+
+	}
+}

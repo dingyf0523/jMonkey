@@ -1,0 +1,28 @@
+MaterialDef HDRFinal {
+
+	MaterialParameters {
+		Int NumSamples
+		Texture2D Texture
+		Texture2D ToneMapTexture
+		Texture2D LumTex
+		Texture2D BlurTex1
+		Texture2D BlurTex2
+//		Texture2D BlurTex3
+		//		Texture2D BlurTex5
+		//		Texture2D HBlurTex
+//		Texture2D DebugTex
+		Float Intensity
+		Texture2D Dirt
+		Texture2D DirtBlur
+	}
+
+	Technique {
+		VertexShader GLSL100: Common/MatDefs/Post/Post.vert
+		FragmentShader GLSL100: Shaders/HDR/HDRFinal.frag
+
+		Defines {
+			HAS_DIRT: Dirt
+		}
+
+	}
+}

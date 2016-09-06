@@ -1,0 +1,33 @@
+MaterialDef PreHdr {
+	MaterialParameters {
+		Int NumSamples
+		Int NumSamplesDepth
+		Texture2D Texture
+	}
+
+//	Technique {
+//		VertexShader GLSL150: Common/MatDefs/Post/Post15.vert
+//		FragmentShader GLSL150: Shaders/HDR/PreHdr.frag
+//
+//		WorldParameters {
+//		}
+//
+//		Defines {
+//			TEXTURE
+//			RESOLVE_MS : NumSamples
+//			RESOLVE_DEPTH_MS : NumSamplesDepth
+//		}
+//	}
+
+	Technique {
+		VertexShader GLSL100: Common/MatDefs/Post/Post.vert
+		FragmentShader GLSL100: Shaders/HDR/PreHdr.frag
+
+		WorldParameters {
+		}
+
+		Defines {
+			TEXTURE
+		}
+	}
+}

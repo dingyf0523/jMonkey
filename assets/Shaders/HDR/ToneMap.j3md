@@ -1,0 +1,18 @@
+MaterialDef Default GUI {
+
+	MaterialParameters {
+		Int NumSamples
+		Int NumSamplesDepth
+		Texture2D Texture
+		Texture2D LumTex
+	}
+
+	Technique {
+		VertexShader GLSL100: Common/MatDefs/Post/Post.vert
+		FragmentShader GLSL100: Shaders/HDR/ToneMap.frag
+
+		WorldParameters {
+		}
+
+	}
+}

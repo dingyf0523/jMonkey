@@ -1,0 +1,17 @@
+MaterialDef HDRFinal {
+
+	MaterialParameters {
+		Int NumSamples
+		Texture2D Texture
+		Vector2 Resolution
+	}
+
+	Technique {
+		VertexShader GLSL100: Common/MatDefs/Post/Post.vert
+		FragmentShader GLSL100: Shaders/HDR/Lum.frag
+
+		WorldParameters {
+		}
+
+	}
+}
